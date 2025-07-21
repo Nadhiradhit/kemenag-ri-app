@@ -1,6 +1,6 @@
 "use client";
 import NewsCard from "@/components/card/news-card";
-import { dataNews } from "@/data/data-news";
+
 import {
 	Carousel,
 	CarouselContent,
@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
+
+import { dataNews } from "@/data/data-news";
 export default function ArticleDashboard() {
 	return (
 		<section className="mt-16">
@@ -21,7 +23,7 @@ export default function ArticleDashboard() {
 						</h2>
 					</div>
 					<div className="space-y-4">
-						{dataNews.map((news, index) => (
+						{dataNews.slice(0, 3).map((news, index) => (
 							<NewsCard key={index} {...news} />
 						))}
 					</div>

@@ -83,7 +83,7 @@ export default function Footer() {
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.680712189452!2d101.4284492!3d0.47586569999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5a8d42b0fd709%3A0xe2c535412fc3541!2sKantor%20Kemenag%20Pekanbaru!5e0!3m2!1sen!2sid!4v1752983239318!5m2!1sen!2sid"
 							loading="lazy"
 							referrerPolicy="no-referrer-when-downgrade"
-							className="w-120 lg:w-150 h-64 rounded-lg border-2 border-gray-600"
+							className="w-full lg:w-150 h-64 rounded-lg border-2 border-gray-600"
 							title="Lokasi Kantor Kemenag Pekanbaru"
 						/>
 					</div>

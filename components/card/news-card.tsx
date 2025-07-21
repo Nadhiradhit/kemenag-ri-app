@@ -10,8 +10,8 @@ export default function NewsCard({
 	title: title,
 	description: description,
 	image: image,
-	link: link,
-}: DataNewsItem) {
+}: // link: link,
+DataNewsItem) {
 	return (
 		<Card className="mb-6 hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1 overflow-hidden group md:py-6">
 			<div className="flex flex-col md:flex-row">
@@ -36,7 +36,7 @@ export default function NewsCard({
 					</div>
 
 					<Link
-						href={link}
+						href={`/news/${id}`}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium text-sm md:text-base transition-colors duration-200 group/link">

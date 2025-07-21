@@ -7,9 +7,10 @@ import {
 	DialogTrigger,
 } from "@/components/ui/dialog";
 import { FaRegFileAlt } from "react-icons/fa";
-import { dataNews } from "@/data/data-news";
+
 import Image from "next/image";
 import React from "react";
+import { dataInformation } from "@/data/data-information";
 
 export default function DashboardHeader() {
 	return (
@@ -38,18 +39,18 @@ export default function DashboardHeader() {
 				</div>
 				<div className="w-full md:w-1/3 md:ml-8 px-4">
 					<h3 className="text-2xl mb-4 font-semibold">Informasi</h3>
-					{dataNews.map((news, index) => (
+					{dataInformation.map((info, index) => (
 						<Dialog key={index}>
 							<DialogTrigger className="mb-4 hover:scale-105 transition duration-300 ease-in">
-								<div className="cursor-pointer bg-[#E3EFFF] w-96 h-24 p-4 rounded-lg shadow-md flex items-center gap-4">
+								<div className="cursor-pointer bg-white border border-green-500 w-72 lg:w-96 h-24 p-4 rounded-lg shadow-md flex items-center gap-4">
 									<FaRegFileAlt />
-									<h2>{news.title}</h2>
+									<h2 className="text-start">{info.title}</h2>
 								</div>
 							</DialogTrigger>
 							<DialogContent>
 								<DialogHeader>
-									<DialogTitle>{news.title}</DialogTitle>
-									<DialogDescription>{news.description}</DialogDescription>
+									<DialogTitle>{info.title}</DialogTitle>
+									<DialogDescription>{info.description}</DialogDescription>
 								</DialogHeader>
 							</DialogContent>
 						</Dialog>
