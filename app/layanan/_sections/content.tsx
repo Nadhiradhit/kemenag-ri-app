@@ -121,7 +121,7 @@ export default function LayananDashboard() {
 											size="sm"
 											className="flex items-center px-3 py-2">
 											<ChevronLeft className="w-4 h-4 mr-1" />
-											Sebelumnya
+											<span className="hidden sm:inline">Sebelumnya</span>
 										</Button>
 
 										<div className="flex space-x-1">
@@ -153,7 +153,7 @@ export default function LayananDashboard() {
 											variant="outline"
 											size="sm"
 											className="flex items-center px-3 py-2">
-											Selanjutnya
+											<span className="hidden sm:inline">Selanjutnya</span>
 											<ChevronRight className="w-4 h-4 ml-1" />
 										</Button>
 									</div>
