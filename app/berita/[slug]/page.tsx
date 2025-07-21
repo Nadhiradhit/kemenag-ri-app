@@ -10,7 +10,7 @@ import { dataNews } from "@/data/data-news";
 
 interface NewsDetailPageProps {
 	params: {
-		slug: string;
+		slug: any;
 	};
 }
 
