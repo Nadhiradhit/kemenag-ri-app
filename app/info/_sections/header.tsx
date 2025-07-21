@@ -22,19 +22,6 @@ export default function InfoHeader({ title }: any) {
 			/>
 			<div className="absolute inset-0 bg-black/20 rounded-2xl" />
 
-			{/* <Breadcrumb>
-                <BreadcrumbList>
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/">Home</BreadcrumbLink>
-                    </BreadcrumbItem>
-                    <BreadcrumbSeparator>
-                        <SlashIcon />
-                    </BreadcrumbSeparator>
-                    <BreadcrumbItem>
-                        <BreadcrumbLink href="/profil">profil</BreadcrumbLink>
-                    </BreadcrumbItem>
-                </BreadcrumbList>
-            </Breadcrumb> */}
 			<div className="absolute inset-0 flex items-center justify-center p-6 lg:p-12">
 				<h1 className="text-white text-2xl lg:text-4xl font-bold leading-tight mb-4">
 					{title}

@@ -72,7 +72,7 @@ export default function Navbar() {
 					</Link>
 				</div>
 
-				<div className="hidden lg:flex">
+				<div className="hidden lg:flex gap-8">
 					{link.map((item, index) => {
 						const isActive = isLinkActive(item.url);
 						return (

@@ -40,20 +40,22 @@ export default function DashboardHeader() {
 				<div className="w-full md:w-1/3 md:ml-8 px-4">
 					<h3 className="text-2xl mb-4 font-semibold">Informasi</h3>
 					{dataInformation.map((info, index) => (
-						<Dialog key={index}>
-							<DialogTrigger className="mb-4 hover:scale-105 transition duration-300 ease-in">
-								<div className="cursor-pointer bg-white border border-green-500 w-72 lg:w-96 h-24 p-4 rounded-lg shadow-md flex items-center gap-4">
-									<FaRegFileAlt />
-									<h2 className="text-start">{info.title}</h2>
-								</div>
-							</DialogTrigger>
-							<DialogContent>
-								<DialogHeader>
-									<DialogTitle>{info.title}</DialogTitle>
-									<DialogDescription>{info.description}</DialogDescription>
-								</DialogHeader>
-							</DialogContent>
-						</Dialog>
+						<div className="bg-white border border-green-500 h-24 p-4 rounded-lg shadow-md flex items-center gap-4 mb-4">
+							<Dialog key={index}>
+								<DialogTrigger className="hover:scale-105 transition duration-300 ease-in-out">
+									<div className="flex items-center justify-center gap-4">
+										<FaRegFileAlt />
+										<h2 className="text-start">{info.title}</h2>
+									</div>
+								</DialogTrigger>
+								<DialogContent>
+									<DialogHeader>
+										<DialogTitle>{info.title}</DialogTitle>
+										<DialogDescription>{info.description}</DialogDescription>
+									</DialogHeader>
+								</DialogContent>
+							</Dialog>
+						</div>
 					))}
 				</div>
 			</div>

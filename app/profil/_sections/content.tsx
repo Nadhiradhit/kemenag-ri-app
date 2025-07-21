@@ -10,6 +10,7 @@ import Image from "next/image";
 import React from "react";
 import { Clock, BookOpen, CheckSquare } from "lucide-react";
 import Link from "next/link";
+import { dataNews } from "@/data/data-news";
 
 export default function ProfileContent() {
 	return (
@@ -76,7 +77,7 @@ export default function ProfileContent() {
 								width={1000}
 								height={500}
 								quality={100}
-								className="w-full h-full rounded-t-2xl"
+								className="w-full h-full rounded-t-2xl object-cover"
 							/>
 						</div>
 						<Link
@@ -93,7 +94,7 @@ export default function ProfileContent() {
 								width={1000}
 								height={500}
 								quality={100}
-								className="w-full h-full rounded-t-2xl"
+								className="w-full h-full rounded-t-2xl object-cover"
 							/>
 						</div>
 						<Link
@@ -110,7 +111,7 @@ export default function ProfileContent() {
 								width={1000}
 								height={500}
 								quality={100}
-								className="w-full h-full rounded-t-2xl"
+								className="w-full h-full rounded-t-2xl object-cover"
 							/>
 						</div>
 						<Link
@@ -124,7 +125,9 @@ export default function ProfileContent() {
 			{/* Mobile Visi dan Misi  */}
 			<div className="flex flex-col items-center justify-center gap-4 container mx-auto lg:hidden mt-8 px-4">
 				<Card className="w-full lg:w-1/3">
-					<div className="relative w-full h-[300px] lg:h-[400px]">
+					<Link
+						href={"/profil/visi-misi"}
+						className="relative w-full h-[300px] lg:h-[400px]">
 						<Image
 							src="/assets/poster-2.png"
 							alt="Logo Kemenag"
@@ -139,10 +142,12 @@ export default function ProfileContent() {
 								Visi dan Misi Kementerian Agama Kota Pekanbaru{" "}
 							</h4>
 						</div>
-					</div>
+					</Link>
 				</Card>
 				<Card className="w-full lg:w-1/3">
-					<div className="relative w-full h-[300px] lg:h-[400px]">
+					<Link
+						href={"/profil/sejarah"}
+						className="relative w-full h-[300px] lg:h-[400px]">
 						<Image
 							src="/assets/poster-1.png"
 							alt="Logo Kemenag"
@@ -157,10 +162,12 @@ export default function ProfileContent() {
 								Sejarah Kementerian Agama Kota Pekanbaru{" "}
 							</h4>
 						</div>
-					</div>
+					</Link>
 				</Card>
 				<Card className="w-full lg:w-1/3">
-					<div className="relative w-full h-[300px] lg:h-[400px]">
+					<Link
+						href={"/profil/fungsi-tugas"}
+						className="relative w-full h-[300px] lg:h-[400px]">
 						<Image
 							src="/assets/poster-3.png"
 							alt="Logo Kemenag"
@@ -175,61 +182,25 @@ export default function ProfileContent() {
 								Fungsi dan Tugas Kementerian Agama Kota Pekanbaru{" "}
 							</h4>
 						</div>
-					</div>
+					</Link>
 				</Card>
 			</div>
 			{/* Gallery */}
 			<div className="my-16 ">
 				<h1 className="text-3xl font-semibold text-center mb-8">Galeri Foto</h1>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 container mx-auto justify-center">
-					<Image
-						src="/assets/image/image-2.jpeg"
-						alt="pic-1"
-						width={1000}
-						height={500}
-						quality={100}
-						className="w-full h-64 object-cover rounded-2xl"
-					/>
-					<Image
-						src="/assets/image/image-1.jpg"
-						alt="pic-2"
-						width={1000}
-						height={500}
-						quality={100}
-						className="w-full h-64 object-cover rounded-2xl"
-					/>
-					<Image
-						src="/assets/image/image-4.jpg"
-						alt="Logo Kemenag"
-						width={1000}
-						height={500}
-						quality={100}
-						className="w-full h-64 object-cover rounded-2xl"
-					/>
-					<Image
-						src="/assets/image/image-6.jpg"
-						alt="Logo Kemenag"
-						width={1000}
-						height={500}
-						quality={100}
-						className="w-full h-64 object-cover rounded-2xl"
-					/>
-					<Image
-						src="/assets/image/image-5.jpg"
-						alt="Logo Kemenag"
-						width={1000}
-						height={500}
-						quality={100}
-						className="w-full h-64 object-cover rounded-2xl"
-					/>
-					<Image
-						src="/assets/header-image.jpg"
-						alt="Logo Kemenag"
-						width={1000}
-						height={500}
-						quality={100}
-						className="w-full h-64 object-cover rounded-2xl"
-					/>
+					{dataNews.slice(0, 6).map((news, index) => (
+						<Link href={`/berita/${news.slug}`} key={index}>
+							<Image
+								src={news.image}
+								alt="pic-1"
+								width={1000}
+								height={500}
+								quality={100}
+								className="w-full h-64 object-cover rounded-2xl hover:scale-105 transition-all duration-300 ease-in-out"
+							/>
+						</Link>
+					))}
 				</div>
 			</div>
 		</section>
