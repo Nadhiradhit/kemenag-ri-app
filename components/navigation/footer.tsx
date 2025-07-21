@@ -15,7 +15,7 @@ export default function Footer() {
 			<div className="pb-6">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-6">
 					<div className="space-y-6">
-						<div className="bg-white p-3 rounded-r-lg flex items-center gap-3 w-96">
+						<div className="bg-white p-3 rounded-r-lg flex items-center gap-3 w-full lg:w-96">
 							<Image
 								src="/assets/logo-kemenag.png"
 								alt="Logo Kemenag"
