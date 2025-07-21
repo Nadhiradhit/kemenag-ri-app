@@ -8,13 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { dataNews } from "@/data/data-news";
 
-interface NewsDetailPageProps {
-	params: {
-		slug: any;
-	};
-}
-
-export default function NewsDetailPage({ params }: NewsDetailPageProps) {
+export default function NewsDetailPage({ params }: any) {
 	const newsItem = dataNews.find((news) => news.slug === params.slug);
 
 	if (!newsItem) {
