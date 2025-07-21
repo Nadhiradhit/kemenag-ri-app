@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { dataService } from "@/data/data-service";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Image } from "lucide-react";
+import Link from "next/link";
 
 export default function LayananDashboard() {
 	const [search, setSearch] = useState("");
@@ -101,10 +102,12 @@ export default function LayananDashboard() {
 									<div
 										key={index}
 										className="bg-white border border-green-500 h-24 p-4 rounded-lg shadow-md flex items-center gap-4">
-										<div className="flex items-center justify-center gap-4">
+										<Link
+											href={service.link}
+											className="flex items-center justify-center gap-4">
 											<Image />
 											<h2 className="text-start">{service.title}</h2>
-										</div>
+										</Link>
 									</div>
 								))}
 							</div>
