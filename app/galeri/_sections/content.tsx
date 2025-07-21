@@ -106,7 +106,7 @@ export default function GaleriDashboard() {
 	};
 
 	return (
-		<section className="my-16 font-manrope">
+		<section className="my-16 font-manrope px-4 lg:px-0">
 			<div className="container mx-auto">
 				<div className="mt-8">
 					{currentNews.length > 0 ? (

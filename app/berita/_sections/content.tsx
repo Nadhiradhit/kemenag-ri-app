@@ -106,7 +106,7 @@ export default function NewsDashboard() {
 	};
 
 	return (
-		<section className="my-16 font-manrope">
+		<section className="my-16 font-manrope px-4 lg:px-0">
 			<div className="container mx-auto">
 				<InputSearch
 					placeholder="Cari Berita"
