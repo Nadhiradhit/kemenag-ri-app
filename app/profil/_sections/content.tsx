@@ -186,7 +186,7 @@ export default function ProfileContent() {
 				</Card>
 			</div>
 			{/* Gallery */}
-			<div className="my-16 ">
+			<div className="my-16 px-4 lg:px-0">
 				<h1 className="text-3xl font-semibold text-center mb-8">Galeri Foto</h1>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 container mx-auto justify-center">
 					{dataNews.slice(0, 6).map((news, index) => (
